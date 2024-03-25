@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+body {
+  background-color: #121212;
+  overflow-x: hidden;
+  font-family: 'Poppins';
+}
+.ani-text {
+  position: relative;
+  
+}
+
+.ani-text::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 0%;
+  height: 3px;
+  background-color: rgb(168 85 247);
+  /* @apply bg-gradient-to-br from-purple-400  to-pink-500; */
+  transition: 0.4s linear;
+  border-radius: 10px;
+}
+
+.ani-text:hover::after {
+  width: 100%;
+}
